@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  script(src='javascripts/pollpage.js')
+  #container
+    h1 Poll
+    h2.title
+    #answers
+    button(onclick="vote()") vote

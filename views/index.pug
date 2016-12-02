@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  script(src="javascripts/main.js")
+  h1= titles
+  button(onclick='newInput()')
+  form(action='/new', method='post')
+    #labels
+      label(style='margin-top:8px')  Poll title
+      input#textLabel.form-control(type='text', placeholder='Barack Obama is back?', name='polltitle')
+      label(style='margin-top:8px')  Answer #1
+      input#textLabel.form-control(type='text', placeholder='Yes he is!', name='answer')
+      label(style='margin-top:8px')  Answer #2
+      input#textLabel.form-control(type='text', placeholder='No he isnt!', name='answer')
+      button Send my greetings
