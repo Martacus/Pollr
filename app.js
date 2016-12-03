@@ -69,9 +69,13 @@ app.use('/', routes);
 app.post('/new', function(req, res, next){
   poll.newPoll(req, res, next);
 })
+app.use('/submit', function(req, res, next){
+    res.render('submit');
+})
 app.use('/*', function(req, res, next){
   res.render('poll');
 })
+
 //app.use('/poll/new', pollRoute);
 //app.use('/users', users);
 
