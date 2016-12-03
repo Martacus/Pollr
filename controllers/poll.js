@@ -25,6 +25,13 @@ module.exports.newPoll = function(req, res, next){
   res.redirect('/' + randomHash);
 }
 
+//Function for getting all polls
+module.exports.allPolls = function(socket){
+    Poll.find({}, function(err, poll){
+        socket.emit("receiveHomePolls", {poll: poll});
+    });
+}
+
 //The function for finding the socket and then sending the poll to the pollpage.js to setup the page
 module.exports.findPollSocket = function(socket, data){
   Poll.findOne({'hash' : data}, function(err, poll){

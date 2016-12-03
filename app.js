@@ -32,7 +32,7 @@ io.on('connection', function (socket) {
     {
       // if url exists, join the room with the url as name
       socket.join(data.hash);
-      // send the socket the data for the poll
+      // send the sockett the data for the poll
       poll.findPollSocket(socket, data.hash);
     }
 
@@ -41,6 +41,10 @@ io.on('connection', function (socket) {
   socket.on('vote', function(data){
     poll.updatePoll(socket, data);
   });
+    
+    socket.on('retrieveHomePolls', function(){
+        poll.allPolls(socket);
+    });
 });
 
 //Routes vars

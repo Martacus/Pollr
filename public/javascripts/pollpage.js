@@ -34,13 +34,11 @@ $( document ).ready(function() {
         count++;
       })
 
-      // put the "begin update listener" into on(sendPoll) so we only start listening once we actually got a pol
+      // put the "begin update listener" into on(sendPoll) so we only start listening once we actually got a poll
       socket.on('beginUpdate', function(data){
         var count = 0;
         data.answers.forEach(function(entry){
-        console.log("ok");
         $('#vote'+count).text(entry.votes);
-          console.log($('#vote'+count).html());
           count++;
         });
       });

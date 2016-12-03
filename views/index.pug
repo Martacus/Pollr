@@ -2,7 +2,7 @@ extends layout
 
 block content
   script(src="javascripts/main.js")
-  h1= titles
+  h1=titles
   button(onclick='newInput()')
   form(action='/new', method='post')
     #labels
@@ -13,3 +13,5 @@ block content
       label(style='margin-top:8px')  Answer #2
       input#textLabel.form-control(type='text', placeholder='No he isnt!', name='answer')
       button Send my greetings
+    
+  div#maindiv
