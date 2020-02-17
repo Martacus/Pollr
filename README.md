@@ -4,4 +4,5 @@ Backend:
 - GraphQL
 
 Frontend:
-- Angular
+- Vue
+- Bootstrap
