@@ -1,23 +1,22 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+      <NavComponent></NavComponent>
+      <router-view/>
   </div>
 </template>
 
 <script>
+// @ is an alias to /src
+import NavComponent from '@/components/Nav.vue'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    NavComponent
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+
 </style>

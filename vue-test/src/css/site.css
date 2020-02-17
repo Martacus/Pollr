@@ -1,0 +1,25 @@
+.list{
+  margin: 10px;
+}
+
+.list-group-item:hover{
+  background: grey;
+  cursor: pointer;
+}
+
+.btn {
+  margin: 0 5px;
+}
+
+.selected {
+  background-color: lightblue;
+}
+
+.correct {
+  background-color:lightgreen;
+}
+
+.incorrect {
+  background-color: red;
+}
+
